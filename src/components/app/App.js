@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import cypherOptionList from './cypherOptionList'
+import cypherOptionList from '../assets/cypherOptionList.json'
 import axios from 'axios';
 import _debounce from 'lodash/debounce'
 
