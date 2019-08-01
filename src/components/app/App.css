@@ -19,6 +19,14 @@
   color: white;  
 }
 
+.cypher-h1 {
+  margin: 15px 0px;
+}
+
+.cypher-h3 {
+  margin: 15px 0px;
+}
+
 .cypher-option {
   color: #282c34;
 }
@@ -36,6 +44,38 @@
   font-family: inherit;
   font: 400 13.3333px Arial;    
 }
+.button_cont {
+  margin: 30px 0px 0px;
+}
+
+.cypher-button {
+  color: #fff !important;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #213764;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.disabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.cypher-button:hover {
+  background: #434343;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+  }
 
 .App-footer {
   background-color: #282c34;
