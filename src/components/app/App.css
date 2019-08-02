@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;  
+  color: white;
 }
 
 .cypher-h1 {
@@ -25,34 +25,6 @@
 
 .cypher-h3 {
   margin: 15px 0px;
-}
-
-.cypher-option {
-  color: #282c34;
-}
-
-.cypher-input-text {
-  height: 80px;
-  width: 300px;
-  border-radius: 5px;
-  font-family: inherit;
-  font: 400 13.3333px Arial;    
-}
-.button_cont {
-  margin: 30px 0px 0px;
-}
-
-.cypher-button {
-  color: #fff !important;
-  font-size: 25px;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #213764;
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  border: none;
-  transition: all 0.4s ease 0s;
 }
 
 .disabled {
@@ -65,11 +37,11 @@
 .cypher-button:hover {
   background: #434343;
   letter-spacing: 1px;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
   transition: all 0.4s ease 0s;
-  }
+}
 
 .App-footer {
   background-color: #282c34;
@@ -79,7 +51,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;  
+  color: white;
 }
 
 .App-link {
@@ -90,6 +62,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
