@@ -1,0 +1,9 @@
+.cypher-select {
+    height: 35px;
+    margin: 15px 0px;
+    border-radius: 5px;
+}
+
+.cypher-option {
+    color: #282c34;
+}

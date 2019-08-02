@@ -1,0 +1,16 @@
+.button_cont {
+    margin: 30px 0px 0px;
+}
+
+.cypher-button {
+    color: #fff !important;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #213764;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
