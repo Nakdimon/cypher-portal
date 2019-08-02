@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component:  Matches the snapshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1
+      className="cypher-h1"
+    >
+      Cypher any text!
+    </h1>
+    <h3
+      className="cypher-h3"
+    >
+      Choose your cypher
+    </h3>
+    <select
+      className="cypher-select"
+      onChange={[Function]}
+    >
+      <option
+        disabled={true}
+        selected={true}
+      >
+        Select a cypher
+      </option>
+      <option
+        className="cypher-option"
+        value="caesar"
+      >
+        Casear
+      </option>
+      <option
+        className="cypher-option"
+        value="rot13"
+      >
+        ROT13
+      </option>
+    </select>
+    <textarea
+      className="cypher-input-text"
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Input the text you want to cypher."
+    />
+    <div
+      align="center"
+      className="button_cont"
+    >
+      <a
+        className="cypher-button disabled"
+        onClick={[Function]}
+      >
+        Cypher Text!
+      </a>
+    </div>
+    <h3>
+      Cyphered Result:
+    </h3>
+    <label
+      className="cypher-result"
+    >
+      You've yet to input something...
+    </label>
+  </header>
+  <footer
+    className="App-footer"
+  />
+</div>
+`;
+
+exports[`App component:  Matches the snapshot. 1`] = `ShallowWrapper {}`;
