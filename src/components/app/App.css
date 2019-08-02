@@ -31,12 +31,6 @@
   color: #282c34;
 }
 
-.cypher-select {
-  height: 35px;
-  margin: 15px 0px;
-  border-radius: 5px; 
-}
-
 .cypher-input-text {
   height: 80px;
   width: 300px;
