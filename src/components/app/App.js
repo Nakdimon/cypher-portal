@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import cypherOptionList from '../assets/cypherOptionList.json'
+import cypherOptionList from '../../assets/cypherOptionList.json'
 import Select from '../select/Select'
 import TextArea from '../textArea/TextArea'
 import Button from '../button/Button'
