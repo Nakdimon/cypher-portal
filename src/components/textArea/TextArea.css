@@ -1,0 +1,8 @@
+.cypher-input-text {
+    height: 80px;
+    width: 300px;
+    border-radius: 5px;
+    font-family: inherit;
+    font: 400 13.3333px Arial;
+    resize: none;      
+  }
