@@ -6,7 +6,9 @@ function Button({
     handleCypherAction
 }) {
     return (
-        <div className="button_cont" align="center"><a className={'cypher-button'+' '+isRequestButtonDisabled} onClick={handleCypherAction}>Cypher Text!</a></div>
+        <div className="button_cont" align="center">
+            <a className={'cypher-button'+' '+isRequestButtonDisabled} onClick={handleCypherAction}>Cypher Text!</a>
+        </div>
     )
 
 }
