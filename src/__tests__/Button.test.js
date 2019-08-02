@@ -1,9 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { create } from 'react-test-renderer';
 import Button from '../components/button/Button';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Button />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+const handleCypherAction = () => 'dummyHandleCypherAction'
+
+describe("Button component: ", ()=> {
+  it("Matches the snapshot", () => {
+    const button = create(
+      <Button
+        isRequestButtonDisabled={false}
+        handleCypherAction={handleCypherAction}
+      />
+    )
+    expect(button).toMatchSnapshot();
+  })
+})

@@ -1,6 +1,6 @@
 import React from 'react';
 import App from '../components/app/App';
-import { shallow }  from '../enzyme'
+import { shallow, mount }  from '../enzyme'
 
 describe("App component: ", ()=> { 
   it("Renders.", () => {

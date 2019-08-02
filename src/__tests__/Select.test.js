@@ -1,10 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { create } from 'react-test-renderer';
 import Select from '../components/select/Select';
 import cypherOptionList from '../assets/cypherOptionList.json'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Select />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+const handleSelectChange = () => 'dummyHandleSelectChange'
+
+describe("Select component: ", ()=> {
+  it("Matches the snapshot", () => {
+    const select = create(
+      <Select
+        cypherOptionList={cypherOptionList} 
+        handleSelectChange={handleSelectChange}
+      />
+    )
+    expect(select).toMatchSnapshot();
+  })
+})

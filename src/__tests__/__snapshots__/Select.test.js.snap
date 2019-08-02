@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component:  Matches the snapshot 1`] = `
+<select
+  className="cypher-select"
+  onChange={[Function]}
+>
+  <option
+    disabled={true}
+    selected={true}
+  >
+    Select a cypher
+  </option>
+  <option
+    className="cypher-option"
+    value="caesar"
+  >
+    Casear
+  </option>
+  <option
+    className="cypher-option"
+    value="rot13"
+  >
+    ROT13
+  </option>
+</select>
+`;
+
+exports[`Select component:  Matches the snapshot 1`] = `
+<select
+  className="cypher-select"
+  onChange={[Function]}
+>
+  <option
+    disabled={true}
+    selected={true}
+  >
+    Select a cypher
+  </option>
+  <option
+    className="cypher-option"
+    value="caesar"
+  >
+    Casear
+  </option>
+  <option
+    className="cypher-option"
+    value="rot13"
+  >
+    ROT13
+  </option>
+</select>
+`;
