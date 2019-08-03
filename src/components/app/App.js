@@ -35,7 +35,8 @@ function App() {
   function handleCypherAction (event) {
     var noSymbolRegex = new RegExp(/^[A-Za-z ]*$/)
     if(noSymbolRegex.test(text)){
-      getCypheredText()
+      var  cypheredText = getCypheredText()
+      setCypheredText(cypheredText)
     } else {
       setCypheredText('That\'s not a valid string :/')
     }
@@ -44,9 +45,9 @@ function App() {
   const getCypheredText = () => {
     axios.get('/'+cypher+'?text='+text)
     .then(function (response) {
-      setCypheredText(response.data)
+      return response.data
     }).catch(function(error) {
-      setCypheredText('WHOOPS! A Mishap...')
+      return 'WHOOPS! A Mishap...'
     })
   }
 

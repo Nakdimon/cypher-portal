@@ -4,6 +4,10 @@ import {
   shallow, mount
 } from '../enzyme'
 
+import axios from 'axios'
+
+jest.mock('axios')
+
 describe("App component: ", () => {
   it("Should render.", () => {
     const component = shallow( < App /> )
@@ -42,7 +46,11 @@ describe("TextArea child: ", () => {
       }
     }
 
-    expect(component.find('a.disabled').exists()).toBe(true)    
+    expect(component.find('a.disabled').exists()).toBe(true)
+    
+    component.find('textarea').simulate('change', event)
+
+    expect(component.find('a.disabled').exists()).toBe(false)
   })
 
   it("Should enable button when changed and disable it again if cleared.", () => {
@@ -98,4 +106,24 @@ describe("Button child: ", () => {
 
   })
 
+  it('Should make request to server when input is valid ', () => {
+    const getSpy = jest.spyOn(axios, 'get')
+    const component = mount(< App />)
+    
+    
+    const event = {
+      preventDefault() {},
+      target: {
+          value: 'request'
+      }
+    }    
+
+    component.find('textarea').simulate('change', event)
+    
+    component.find('a').simulate('click')
+
+    console.log(getSpy)
+
+    expect(getSpy).toBeCalled()
+  })
 })
