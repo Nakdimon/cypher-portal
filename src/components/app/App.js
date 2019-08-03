@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import cypherOptionList from '../assets/cypherOptionList.json'
+import cypherOptionList from '../../assets/cypherOptionList.json'
 import Select from '../select/Select'
 import TextArea from '../textArea/TextArea'
 import Button from '../button/Button'
@@ -33,15 +33,21 @@ function App() {
   }
 
   function handleCypherAction (event) {
-    getCypheredText()
+    var noSymbolRegex = new RegExp(/^[A-Za-z ]*$/)
+    if(noSymbolRegex.test(text)){
+      var  cypheredText = getCypheredText()
+      setCypheredText(cypheredText)
+    } else {
+      setCypheredText('That\'s not a valid string :/')
+    }
   }
 
   const getCypheredText = () => {
     axios.get('/'+cypher+'?text='+text)
     .then(function (response) {
-      setCypheredText(response.data)
+      return response.data
     }).catch(function(error) {
-      setCypheredText('WHOOPS! A Mishap...')
+      return 'WHOOPS! A Mishap...'
     })
   }
 
