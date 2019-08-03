@@ -122,8 +122,6 @@ describe("Button child: ", () => {
     
     component.find('a').simulate('click')
 
-    console.log(getSpy)
-
     expect(getSpy).toBeCalled()
   })
 })
