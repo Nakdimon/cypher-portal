@@ -24,7 +24,7 @@ function App() {
 
   function handleTextAreaChange (event) {
     if(event.target.value === '') {
-      setCypheredText('Dont\'t you want to cypher something? :/')
+      setCypheredText('Don\'t you want to cypher something? :/')
       setIsRequestButtonDisabled('disabled')
     } else {
       setText(event.target.value)
@@ -35,8 +35,8 @@ function App() {
   function handleCypherAction (event) {
     var noSymbolRegex = new RegExp(/^[A-Za-z ]*$/)
     if(noSymbolRegex.test(text)){
-      var  cypheredText = getCypheredText()
-      setCypheredText(cypheredText)
+      setCypheredText('Waiting for an encrypted message...')
+      getCypheredText()      
     } else {
       setCypheredText('That\'s not a valid string :/')
     }
@@ -45,7 +45,7 @@ function App() {
   const getCypheredText = () => {
     axios.get('/'+cypher+'?text='+text)
     .then(function (response) {
-      return response.data
+      setCypheredText(response.data)
     }).catch(function(error) {
       return 'WHOOPS! A Mishap...'
     })
