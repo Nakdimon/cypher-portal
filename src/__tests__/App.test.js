@@ -72,3 +72,30 @@ describe("TextArea child: ", () => {
     
   })
 })
+
+describe("Button child: ", () => {
+  it('Should be disabled by default.', () => {
+    const component = mount(< App />)
+
+    expect(component.find('a.disabled').exists()).toBe(true)
+  })
+
+  it('Should change label if textarea input is not valid. ', () => {
+    const component = mount(< App />)
+
+    const invalidInputEvent = {
+      preventDefault() {},
+      target: {
+          value: '1234'
+      }
+    }
+
+    component.find('textarea').simulate('change', invalidInputEvent)
+
+    component.find('a').simulate('click')
+
+    expect(component.find('label.cypher-result').text()).toBe('That\'s not a valid string :/')
+
+  })
+
+})
