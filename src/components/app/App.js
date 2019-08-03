@@ -33,7 +33,12 @@ function App() {
   }
 
   function handleCypherAction (event) {
-    getCypheredText()
+    var noSymbolRegex = new RegExp(/^[A-Za-z ]*$/)
+    if(noSymbolRegex.test(text)){
+      getCypheredText()
+    } else {
+      setCypheredText('That\'s not a valid string :/')
+    }
   }
 
   const getCypheredText = () => {
