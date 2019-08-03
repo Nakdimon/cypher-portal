@@ -1,18 +1,60 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import {
+    shallow,
+    mount
+} from '../enzyme'
 import Select from '../components/select/Select';
 import cypherOptionList from '../assets/cypherOptionList.json'
 
-const handleSelectChange = () => 'dummyHandleSelectChange'
+const handleSelectChange = jest.fn()
 
-describe("Select component: ", ()=> {
-  it("Matches the snapshot", () => {
-    const select = create(
-      <Select
-        cypherOptionList={cypherOptionList} 
-        handleSelectChange={handleSelectChange}
-      />
-    )
-    expect(select).toMatchSnapshot();
-  })
+describe("Select component: ", () => {
+    it("Should match the snapshot", () => {
+        const component = shallow( <
+            Select cypherOptionList = {
+                cypherOptionList
+            }
+            handleSelectChange = {
+                handleSelectChange
+            }
+            />
+        )
+        expect(component).toMatchSnapshot();
+    })
+
+    it("Should render", () => {
+        const component = shallow( <
+            Select cypherOptionList = {
+                cypherOptionList
+            }
+            handleSelectChange = {
+                handleSelectChange
+            }
+            />
+        )
+        expect(component.exists()).toBe(true)
+    })
+
+    it("Should run handler when changed", () => {
+        const component = shallow( <
+            Select cypherOptionList = {
+                cypherOptionList
+            }
+            handleSelectChange = {
+                handleSelectChange
+            }
+            />
+        )
+        
+        const event = {
+            preventDefault() {},
+            target: {
+                value: 'event'
+            }
+        }
+
+        component.find('select').simulate('change', event)
+
+        expect(handleSelectChange.mock.calls.length).toEqual(1)
+    })
 })

@@ -1,15 +1,19 @@
 import React from 'react';
 import App from '../components/app/App';
-import { shallow, mount }  from '../enzyme'
+import {
+  shallow,
+  mount
+} from '../enzyme'
 
-describe("App component: ", ()=> { 
-  it("Renders.", () => {
-    const component = shallow(<App />)
+describe("App component: ", () => {
+  it("Should render.", () => {
+    const component = shallow( < App / > )
     expect(component.exists()).toBe(true)
-  }),
+  })
 
-  it("Matches the snapshot.", () => {
-    const component = shallow(<App />)
+  it("Should match the snapshot.", () => {
+    const component = shallow( < App / > )
     expect(component).toMatchSnapshot();
   })
+
 })
