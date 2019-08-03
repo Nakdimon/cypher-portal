@@ -1,8 +1,7 @@
 import React from 'react';
 import App from '../components/app/App';
 import {
-  shallow,
-  mount
+  shallow
 } from '../enzyme'
 
 describe("App component: ", () => {

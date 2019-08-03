@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-    shallow,
-    mount
+    shallow
 } from '../enzyme'
 import Button from '../components/button/Button';
 

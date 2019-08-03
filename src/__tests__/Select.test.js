@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-    shallow,
-    mount
+    shallow
 } from '../enzyme'
 import Select from '../components/select/Select';
 import cypherOptionList from '../assets/cypherOptionList.json'
